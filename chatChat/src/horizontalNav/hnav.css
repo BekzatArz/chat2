@@ -1,0 +1,51 @@
+.hnav{
+   border-bottom: solid 1.5px rgba(241, 242, 246, 1);
+   height: 80px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tabs{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   width: 900px;
+   padding-left: 500px;
+   font-size: 20px;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+   color: rgba(120, 130, 146, 1);
+   margin-top: 20px;
+
+}
+
+.search{
+   margin-top: 27px;
+   margin-left: 350px;
+}
+
+.login{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   width: 100px;
+   padding: 0px 10px 0px 10px;
+   height: 60px;
+   margin-top: 10px;
+   margin-left: 20px;
+   border: solid 3px rgba(241, 242, 246, 1);
+   border-radius: 50px;
+}
+
+.loginText{
+   font-size: 20px;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+   color: rgba(120, 130, 146, 1);
+   margin-top: 17px;
+}
+
+.logoLogin{
+   margin-top: 14px;
+   color: black;
+}
+
+.clik{
+   color: rgba(67, 75, 248, 1);
+}
