@@ -7,6 +7,9 @@ import { FiPhoneCall } from "react-icons/fi"
 import { GoDeviceCameraVideo } from "react-icons/go"
 import { useState } from 'react'
 
+
+import logoYolo from "./logo.svg"
+
 export default function Nav(){
    const [clikedHome, setClikedHome] = useState(true)
    const [clikedChat, setClikedChat] = useState(false)
@@ -59,8 +62,9 @@ export default function Nav(){
       <>
          <div className='nav'>
             <div className='icons' >
-            <img src="" alt="" />
+            <img src={logoYolo} alt="" className='logo'/>
                <div  clasName="continerIcon">
+                  
                   <GoHome
                      size={30}
                      className={clikedHome === true? `icon clicked` : `icon`}
