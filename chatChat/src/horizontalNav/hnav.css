@@ -1,51 +1,69 @@
-.hnav{
-   border-bottom: solid 1.5px rgba(241, 242, 246, 1);
-   height: 80px;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+.hnav {
+	max-width: 1440px;
+	padding: 0 25px;
+	border-bottom: solid 1.5px rgba(241, 242, 246, 1);
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 
-.tabs{
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-   width: 900px;
-   padding-left: 500px;
-   font-size: 20px;
-   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-   color: rgba(120, 130, 146, 1);
-   margin-top: 20px;
-
+.tabs {
+	max-width: 900px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 20px;
+	color: rgba(120, 130, 146, 1);
+	margin-right: 100px;
 }
 
-.search{
-   margin-top: 27px;
-   margin-left: 350px;
+.clik {
+	transition: all;
+	cursor: pointer;
 }
 
-.login{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   width: 100px;
-   padding: 0px 10px 0px 10px;
-   height: 60px;
-   margin-top: 10px;
-   margin-left: 20px;
-   border: solid 3px rgba(241, 242, 246, 1);
-   border-radius: 50px;
+.clik:hover {
+	color: rgba(67, 75, 248, 1);
 }
 
-.loginText{
-   font-size: 20px;
-   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-   color: rgba(120, 130, 146, 1);
-   margin-top: 17px;
+.clik:first-child {
+	color: rgba(67, 75, 248, 1);
+	padding-right: 51px;
 }
 
-.logoLogin{
-   margin-top: 14px;
-   color: black;
+.avatar {
+	display: flex;
+	align-items: center;
+}
+.search {
+	margin-left: 100px;
 }
 
-.clik{
-   color: rgba(67, 75, 248, 1);
+.login {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100px;
+	padding: 0px 10px 0px 10px;
+	height: 60px;
+	margin-left: 20px;
+	border: solid 3px rgba(241, 242, 246, 1);
+	border-radius: 50px;
 }
+
+.loginText {
+	font-size: 20px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: rgba(120, 130, 146, 1);
+	margin-top: 17px;
+}
+
+.logoLogin {
+	margin-top: 14px;
+	color: black;
+}
+
+/* .clik {
+	color: rgba(67, 75, 248, 1);
+} */

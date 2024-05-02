@@ -1,26 +1,57 @@
-.nav{
-   background: rgba(255, 255, 255, 1);
-   border-right: 1.5px solid rgba(241, 242, 246, 1);
-   width: 82px;
+.nav {
+	background: rgba(255, 255, 255, 1);
+	border-right: 1.5px solid rgba(241, 242, 246, 1);
+	width: 82px;
 }
 
-.icons{
-   display: grid;
-   grid-template-columns: 1fr;
-   margin-top: 90px;
-   
-   color:rgba(153, 153, 153, 1);
+.logo {
+	width: 38px;
+	padding: 17px;
+	margin-bottom: 25px;
 }
 
-.icon{
-   padding-bottom: 50px;
-   padding-left: 10px;
+.icons {
+	display: grid;
+	grid-template-columns: 1fr;
+	color: rgba(153, 153, 153, 1);
 }
 
-
-.clicked{
-   color: rgba(67, 75, 248, 1);
-   padding-left: 12px;
+.continerIcon.active::before {
+	opacity: 1;
 }
 
+.continerIcon {
+	position: relative;
+	padding-left: 10px;
+}
 
+.continerIcon::before {
+	content: '';
+	position: absolute;
+	top: 20%;
+	transform: translateY(-50%);
+	height: 40px;
+	width: 5px;
+	border-radius: 20px;
+	background-color: #fff;
+	opacity: 0;
+	transition: opacity 0.1s ease;
+	background-color: rgba(67, 75, 248, 1); /* Цвет линии */
+}
+
+.continerIcon:hover::before {
+	opacity: 1;
+}
+.continerIcon:hover {
+	color: rgba(67, 75, 248, 1);
+}
+
+.icon {
+	padding-bottom: 50px;
+	padding-left: 10px;
+}
+
+.clicked {
+	color: rgba(67, 75, 248, 1);
+	padding-left: 12px;
+}
