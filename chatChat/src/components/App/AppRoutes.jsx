@@ -17,12 +17,12 @@ const AppRoutes = () => {
             <NavBar />
             <div className={styles.container}>
                 <Routes>
-                    <Route path="/" exact="true" element={<Home />}/>
-                    <Route path='*' element={<NotFound />}/>
-                    <Route path="/messages" element={<Messages />}/>
-                    <Route path="/friends" element={<Friends />}/>
-                    <Route path="/bells" element={<Bells />}/>
-                    <Route path="/videobells" element={<VideoBells />}/>
+                    <Route exact path="/" element={<Home />}/>
+                    <Route exact path='*' element={<NotFound />}/>
+                    <Route exact path="/messages" element={<Messages />}/>
+                    <Route exact path="/friends" element={<Friends />}/>
+                    <Route exact path="/bells" element={<Bells />}/>
+                    <Route exact path="/videobells" element={<VideoBells />}/>
                 </Routes>
             </div>
         </Router>
