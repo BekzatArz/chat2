@@ -16,13 +16,13 @@ const AppRoutes = () => {
         <Router>
             <NavBar />
             <div className={styles.container}>
-                <Routes>
-                    <Route exact path="/" element={<Home />}/>
-                    <Route exact path='*' element={<NotFound />}/>
-                    <Route exact path="/messages" element={<Messages />}/>
-                    <Route exact path="/friends" element={<Friends />}/>
-                    <Route exact path="/bells" element={<Bells />}/>
-                    <Route exact path="/videobells" element={<VideoBells />}/>
+                <Routes basename={import.meta.env.BASE_URL}> 
+                    <Route exact path="/chat2/" element={<Home />}/>
+                    <Route path='*' element={<NotFound />}/>
+                    <Route exact path="/chat2/messages" element={<Messages />}/>
+                    <Route exact path="/chat2/friends" element={<Friends />}/>
+                    <Route exact path="/chat2/bells" element={<Bells />}/>
+                    <Route exact path="/chat2/videobells" element={<VideoBells />}/>
                 </Routes>
             </div>
         </Router>
