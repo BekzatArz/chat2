@@ -13,16 +13,16 @@ import styles from "./AppRoutes.module.css"
 const AppRoutes = () => {
   return (
     <div className={styles.out_container}>
-        <Router>
+        <Router basename={import.meta.env.BASE_URL}>
             <NavBar />
             <div className={styles.container}>
-                <Routes basename={import.meta.env.BASE_URL}> 
-                    <Route exact path="/chat2/" element={<Home />}/>
+                <Routes> 
+                    <Route exact path="/" element={<Home />}/>
                     <Route path='*' element={<NotFound />}/>
-                    <Route exact path="/chat2/messages" element={<Messages />}/>
-                    <Route exact path="/chat2/friends" element={<Friends />}/>
-                    <Route exact path="/chat2/bells" element={<Bells />}/>
-                    <Route exact path="/chat2/videobells" element={<VideoBells />}/>
+                    <Route exact path="/messages" element={<Messages />}/>
+                    <Route exact path="/friends" element={<Friends />}/>
+                    <Route exact path="/bells" element={<Bells />}/>
+                    <Route exact path="/videobells" element={<VideoBells />}/>
                 </Routes>
             </div>
         </Router>
