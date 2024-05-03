@@ -8,11 +8,13 @@ import { BsPeople } from "react-icons/bs";
 import { BsTelephone } from "react-icons/bs";
 import { BsCameraVideo } from "react-icons/bs";
 
+import logo from "../../icons/logo.svg"
+
 const NavBar = () => {
   return (
     <div className='navbar'>
-        <NavLink className='logo' to='/'><img src="../../../public/logo.svg" width="60" alt="" /></NavLink>
-        <NavLink className={({isActive}) => isActive? "active-link" : ""} exact="true" to="/"><GoHome size={32}/></NavLink>
+        <NavLink to='/'><img src={logo} alt="" width={60}/></NavLink>
+        <NavLink className={({isActive}) => isActive? "active-link" : ""} to="/"><GoHome size={32}/></NavLink>
         <NavLink className={({isActive}) => isActive? "active-link" : ""} to="/messages"><BiMessageRounded size={32}/></NavLink>
         <NavLink className={({isActive}) => isActive? "active-link" : ""} to="/friends"><BsPeople size={32}/></NavLink>
         <NavLink className={({isActive}) => isActive? "active-link" : ""} to="/bells"><BsTelephone size={29}/></NavLink>
