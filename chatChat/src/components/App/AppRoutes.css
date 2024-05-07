@@ -1,0 +1,17 @@
+.container {
+    width: 80vw;
+    height: 100%;
+    margin: 0 auto;
+ }
+ .reg{
+    width: 100vw;
+    height: 100vh;
+ }
+ .btns{
+    margin-left: 200px;
+}
+.btns a {
+    padding: 5px 20px;
+    margin: 10px;
+
+ }
