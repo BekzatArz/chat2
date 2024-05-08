@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route,  Routes, useLocation, NavLink} from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Route,  Routes, useLocation, NavLink, Navigate } from 'react-router-dom'
 
 import "./AppRoutes.css"
 
@@ -9,21 +9,27 @@ import Friends from "../Friends/Friends"
 import Bells from "../Bells/Bells"
 import VideoBells from "../VideoBells/VideoBells"
 import NotFound from "../NotFound/NotFound"
-import Registration from "../Registration/Registration"
 import NavBar from "../NavBar/NavBar"
+import Registration from '../SignIn/Registration/Registration'
+import Login from '../SignIn/Login/Login'
 
 
 const AppRoutes = () => {
   const location = useLocation()
+
+  useEffect(() => {
+    console.log(location)
+  })
   return(
     <div className='appRoutes'>
-        {location.pathname === "/registration" ? null : 
+        {location.pathname === "/login" || location.pathname === "/registration" ? null : 
         <NavBar  />
         }
-      <div className={location.pathname === "/registration" ? "reg" : "container"} >
+      <div className={location.pathname === "/registration" || location.pathname === "/login" ? "sign" : "container"} >
           <Routes> 
               <Route exact path="/" element={<Home />}/>
-              <Route exact path='/registration' element={<Registration />} />
+              <Route path='/registration' element={<Registration />}/> 
+              <Route path='/login' element={<Login />}/> 
               <Route exact path="/messages" element={<Messages />}/>
               <Route exact path="/friends" element={<Friends />}/>
               <Route exact path="/bells" element={<Bells />}/>
